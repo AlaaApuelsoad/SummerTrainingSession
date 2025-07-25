@@ -58,6 +58,7 @@
 ##  Session 3: Database Integration
 
 ### Topics:
+- What is a Database?
 - Database Connection
 - What is ORM?
 - Introduction to Hibernate & JPA
