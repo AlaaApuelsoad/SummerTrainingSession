@@ -59,7 +59,7 @@
 
 ### Topics:
 - What is a Database?
-- JDBC
+- JDBC, Spring JDBC
 - What is ORM?
 - Introduction to Hibernate & JPA
 - JPA Annotations:
