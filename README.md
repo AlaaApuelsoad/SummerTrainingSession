@@ -72,11 +72,10 @@
 ### Topics:
 - JPA Repository:
   - `@Repository`, `@Query`
+- Column Constraints
 - CRUD Operations with Spring Data JPA
 - ID Generation Strategies:
   - `@GeneratedValue`, `@SequenceGenerator`, `@TableGenerator`
-- Column Constraints:
-  - `@Pattern`, `@NotNull`, `@Transient`
 - Introduction to ERD (Entity Relationship Diagram)
 
 ---
