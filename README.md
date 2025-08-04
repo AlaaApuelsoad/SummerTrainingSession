@@ -64,21 +64,19 @@
 - Introduction to Hibernate & JPA
 - JPA Annotations:
   - `@Entity`, `@Table`, `@Id`, `@Column`
-- Introduction to ERD (Entity Relationship Diagram)
 
 ---
 
 ##  Session 4: Spring Data JPA
 
 ### Topics:
+- JPA Repository:
+  - `@Repository`, `@Query`
+- Column Constraints
 - CRUD Operations with Spring Data JPA
 - ID Generation Strategies:
   - `@GeneratedValue`, `@SequenceGenerator`, `@TableGenerator`
-- Column Constraints:
-  - `@Pattern`, `@NotNull`, `@Transient`
-- JPA Repository:
-  - `@Repository`, `@Query`
-- Understanding Spring Project Folder Structure and Layers
+- Introduction to ERD (Entity Relationship Diagram)
 
 ---
 
