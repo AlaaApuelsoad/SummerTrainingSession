@@ -83,13 +83,13 @@
 ##  Session 5: Advanced JPA & Relationships
 
 ### Topics:
+- Using `ResponseEntity`
 - Entity Relationships:
   - `@OneToMany`, `@ManyToOne`
 - Java Bean Validation:
   - `@NotNull`, `@Size`, `@Email`
 - Jackson Bidirectional Serialization Issues
 - JPA Cascading Operations
-- Using `ResponseEntity`
 
 ---
 
