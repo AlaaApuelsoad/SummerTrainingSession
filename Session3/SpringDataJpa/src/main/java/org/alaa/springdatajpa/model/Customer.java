@@ -2,11 +2,9 @@ package org.alaa.springdatajpa.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Scope("prototype")
 @Getter
 @Setter
 @ToString

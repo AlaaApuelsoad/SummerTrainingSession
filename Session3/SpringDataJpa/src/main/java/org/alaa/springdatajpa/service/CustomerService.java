@@ -1,5 +1,6 @@
 package org.alaa.springdatajpa.service;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.alaa.springdatajpa.model.Customer;
 import org.alaa.springdatajpa.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,8 @@ public class CustomerService {
     }
 
     public void deleteCustomerById(int id) {
-        customerRepository.deleteById(id);
+        Customer customer = this.getCustomerBYId(id);
+        customerRepository.delete(customer);
     }
 
     public Customer updateCustomer(int id, Map<String, Object> updateReq) {
@@ -39,4 +41,10 @@ public class CustomerService {
         return customerRepository.save(dbCustomer);
     }
 
+    public Customer getCustomerBYId(int id) {
+        Customer customer = customerRepository.findById(id).orElseThrow(
+                ()-> new EntityNotFoundException("Customer with id " + id + " not found")
+        );
+        return customer;
+    }
 }
