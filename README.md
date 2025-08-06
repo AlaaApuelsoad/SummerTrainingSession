@@ -107,7 +107,7 @@
   - `@ControllerAdvice`, `@ExceptionHandler`
  
 - Task self study
-  Spring AOP
+  [Spring AOP](https://medium.com/@alxkm/spring-aop-explained-how-to-implement-aspect-oriented-programming-in-your-spring-application-17cee1da12e8)
   - AOP Annotations:
   - `@EnableAspectJAutoProxy`
   - `@Aspect`, `@Order`
