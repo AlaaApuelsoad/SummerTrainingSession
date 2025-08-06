@@ -85,7 +85,7 @@
 ### Topics:
 - Using `ResponseEntity`
 - Entity Relationships:
-  - `@OneToMany`, `@ManyToOne`
+  - `@OneToOne`,`@OneToMany`, `@ManyToOne`,`@ManyToMany`
 - Java Bean Validation:
   - `@NotNull`, `@Size`, `@Email`
 - Jackson Bidirectional Serialization Issues
