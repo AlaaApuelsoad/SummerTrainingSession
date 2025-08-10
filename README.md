@@ -97,7 +97,7 @@
 
 ### Topics:
 - [Install and Configure Redis](https://www.youtube.com/watch?v=DLKzd3bvgt8&ab_channel=TrendingCode)
-- Caching in Spring Boot using Redis
+- [Caching in Spring Boot using Redis](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
 - Spring Cache Annotations:
   - `@EnableCaching`
   - `@Cacheable`
