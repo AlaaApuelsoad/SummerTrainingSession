@@ -96,7 +96,7 @@
 ##  Session 6: Caching with Redis
 
 ### Topics:
-- Install and Configure Redis
+- [Install and Configure Redis](https://www.youtube.com/watch?v=DLKzd3bvgt8&ab_channel=TrendingCode)
 - Caching in Spring Boot using Redis
 - Spring Cache Annotations:
   - `@EnableCaching`
