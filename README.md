@@ -97,11 +97,12 @@
 
 ### Topics:
 - [Install and Configure Redis](https://www.youtube.com/watch?v=DLKzd3bvgt8&ab_channel=TrendingCode)
-- [Caching in Spring Boot using Redis](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
+- Caching in Spring Boot using Redis
 - Spring Cache Annotations:
   - `@EnableCaching`
   - `@Cacheable`
   - `@CacheEvict`
+  [Reference](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
  
 - Global Exception Handling:
   - `@ControllerAdvice`, `@ExceptionHandler`
