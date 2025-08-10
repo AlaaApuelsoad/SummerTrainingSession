@@ -102,7 +102,7 @@
   - `@EnableCaching`
   - `@Cacheable`
   - `@CacheEvict`
-  [Reference](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
+  - [Medium Reference](https://medium.com/vedity/spring-boot-caching-mechanism-8ef901147e60)
  
 - Global Exception Handling:
   - `@ControllerAdvice`, `@ExceptionHandler`
