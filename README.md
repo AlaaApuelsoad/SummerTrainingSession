@@ -86,7 +86,7 @@
 - Using `ResponseEntity`
 - Entity Relationships:
   - `@OneToOne`,`@OneToMany`, `@ManyToOne`,`@ManyToMany`
-- Java Bean Validation:
+- [Java Bean Validation:](https://www.baeldung.com/java-validation)
   - `@NotNull`, `@Size`, `@Email`
 - Jackson Bidirectional Serialization Issues
 - JPA Cascading Operations
