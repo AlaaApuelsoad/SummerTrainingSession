@@ -1,7 +1,6 @@
 package org.alaa.entityrelations.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.alaa.entityrelations.model.Employee;
 import org.alaa.entityrelations.model.Laptop;
 import org.alaa.entityrelations.service.LaptopService;
 import org.springframework.http.HttpStatus;

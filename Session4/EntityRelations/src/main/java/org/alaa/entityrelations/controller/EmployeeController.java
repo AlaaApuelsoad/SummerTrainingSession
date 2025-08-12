@@ -1,10 +1,13 @@
 package org.alaa.entityrelations.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.alaa.entityrelations.dto.EmployeeInfoDto;
+import org.alaa.entityrelations.dto.EmployeeRegisterDto;
 import org.alaa.entityrelations.model.Employee;
 import org.alaa.entityrelations.service.EmployeeService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -60,6 +63,21 @@ public class EmployeeController {
     @GetMapping("/empData")
     public ResponseEntity<List<Map<String,Object>>> getEmployeeData(){
         return new ResponseEntity<>(employeeService.getEmployeeData(), HttpStatus.OK);
+    }
+
+    @PostMapping("/assignToProject/{empId}/{projId}")
+    public ResponseEntity<Employee> assignToProject(@PathVariable Long empId, @PathVariable Long projId) {
+        return new ResponseEntity<>(employeeService.assignToProject(empId,projId),HttpStatus.ACCEPTED);
+    }
+
+    @GetMapping("/{empId}")
+    public ResponseEntity<?> getEmployeeById(@PathVariable Long empId) {
+        return new ResponseEntity<>(employeeService.getEmployeeById(empId),HttpStatus.ACCEPTED);
+    }
+
+    @PostMapping("/validation")
+    public ResponseEntity<EmployeeRegisterDto> validateEmployee(@Validated  @RequestBody EmployeeRegisterDto employeeRegisterDto) {
+        return new ResponseEntity<>(employeeRegisterDto, HttpStatus.ACCEPTED);
     }
 
 }

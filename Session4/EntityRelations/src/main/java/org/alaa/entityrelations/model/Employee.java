@@ -1,12 +1,13 @@
 package org.alaa.entityrelations.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Table(name = "comp_employees")
@@ -15,9 +16,10 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonIdentityInfo(
+//        generator = ObjectIdGenerators.PropertyGenerator.class,
+//        property = "id")
 public class Employee {
 
     @Id
@@ -31,14 +33,33 @@ public class Employee {
     private String email;
     private String password;
     private BigDecimal salary;
+    private LocalDate birthDate;
+
+    //composite Attribute
+    @Embedded
+    private Address address;
+
+    //derivedAttribute
+    @Transient
+    private int age;
 
     @OneToOne(cascade = {CascadeType.PERSIST})
     @JoinColumn(name = "laptop_id",referencedColumnName = "id")
     private Laptop laptop;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id",referencedColumnName = "id")
-//    @JsonBackReference(value = "empDepRef")
+    @JsonBackReference(value = "empDepRef")
     private Department department;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "emp_project", joinColumns = @JoinColumn(name = "empi_id",referencedColumnName = "id"),
+                inverseJoinColumns = @JoinColumn(name = "project_id",referencedColumnName = "id"))
+    private List<Project> projects;
+
+    public int getAge() {
+       return LocalDate.now().compareTo(this.birthDate);
+    }
+
 
 }
